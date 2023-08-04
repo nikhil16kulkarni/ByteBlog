@@ -1,0 +1,15 @@
+<%# Partial file %>
+
+
+
+<% @post.comments.each do |comment| %>
+    <div class="well">
+    <p><strong><%= comment.name %></strong>: <%= comment.body %>
+
+
+
+<%= link_to 'Remove Comment', [comment.post, comment], method: :delete, data: {confirm: 'Do you really want to delete the comment?'} %>
+
+</p>
+</div>
+<% end %>
