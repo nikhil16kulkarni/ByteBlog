@@ -20,6 +20,16 @@ Welcome to the ByteBlog - An Interactive Blog Application! This web application 
 5. Start the server: `bin/rails server`
 6. Access the application in your web browser at: `http://localhost:3000`
 
+If facing an error like this - </br> `error: while executing gem ... (gem::remotefetcher::fetcherror) errno::econnreset: an existing connection was forcibly closed by the remote host. - ssl_connect (gem::remotefetcher::fetcherror)`
+
+This should resolve your error: (Windows) (Switching to ipv4) </br>
+`$webClient = New-Object System.Net.WebClient` </br>
+`$webClient.DownloadFile("http://rubygems.org", "rubygems_ipv4.html")` </br>
+`gem update –system` </br>
+`gem install bundler` </br>
+`bundle install` </br>
+
+
 ## Usage
 
 - Create a new account or log in.
